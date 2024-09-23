@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link rel="stylesheet" href="{% static "css/contact.css" %}">
+    <link rel="icon" type="image/png" href="{% static "images/fvi.png" %}">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <style>
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .boxes {
+      display: inline-block;
+      width: 250px; /* adjust the width as needed */
+      height: 200px; /* adjust the height as needed */
+      margin: 10px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative; /* add this */
+    }
+    
+    .topic {
+      padding: 10px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .buttons {
+      position: absolute;
+      bottom: 20px; /* move the buttons 20px from the bottom */
+      left: 20px; /* move the buttons 20px from the left */
+    }
+    
+    .buttons a {
+      margin-right: 10px; /* increase the gap between the buttons */
+    }
+   
+    .language-box {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 300px; /* adjust the width as needed */
+      float: right; /* make the box float to the right */
+      margin: 20px; /* add some margin to the box */
+    }
+    
+    .language-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .language-icons i {
+      font-size: 36px; /* adjust the font size as needed */
+      margin: 20px; /* add some margin to the icons */
+      color: #666; /* adjust the color as needed */
+    }
+   </style>
+  </head>
+  <body>
+    <!-- Move to up button -->
+    <div class="scroll-button">
+      <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <!-- navgaition menu -->
+    <nav>
+      <div class="navbar">
+       
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </ul>
+        <div class="media-icons">
+          <a href="https://www.linkedin.com/in/rohan-dahal-73974b326" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/roohantweets?s=21&t=3SB_iI7Vd9gxQsFiVLi68w" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/_rohan.dahal/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Home Section Start -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <div class="text">
+          <div class="text-one">Hello!</div>
+          <div class="text-two"> I’m Rohan Dahal, <br>tech enthusiast driven by innovation.</div>
+          <div class="text-three">Python/Django Developer</div>
+          <div class="text-four">From Nepal</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section Start -->
+    <section class="about" id="about">
+      <div class="content">
+        <div class="title"><span>About Me</span></div>
+        <div class="about-details">
+          <div class="left">
+            <img src="{% static "images/myimg.jpg" %}" alt="" />
+          </div>
+          <div class="right">
+            <div class="topic">Meet Your Developer</div>
+            <p>
+                Hi there! I’m a passionate Python and Django developer with a knack for building robust web applications. With a strong foundation in back-end development and a keen eye for detail, I thrive on turning complex problems into elegant solutions.
+
+                My journey in coding began with a curiosity for how things work, which quickly evolved into a love for crafting seamless user experiences. I enjoy leveraging the Django framework to create scalable and efficient applications that meet user needs while adhering to best practices.
+                
+                I believe in the power of collaboration and continuous learning, always seeking to expand my skill set and stay updated with the latest industry trends. When I’m not coding, you can find me exploring tech blogs, contributing to open-source projects, or diving into new programming languages.
+                
+                
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- My Skill Section Start -->
+<section class="skills" id="skills">
+  <div class="content">
+    <div class="title"><span>My Skills</span></div>
+    <div class="skills-details">
+      <div class="text">
+        <div class="topic">My Journey as a Versatile Developer: Embracing Python, Django, and Beyond</div>
+        <p>I am an enthusiastic developer currently specializing in Python and Django, where I create dynamic, scalable web applications that prioritize user experience and performance. My programming journey has provided me with a strong foundation in a variety of languages, including C, C#, Java, JavaScript, HTML, CSS, and .NET. Additionally, I have experience with MySQL, which enhances my ability to manage and optimize databases for robust applications. This diverse skill set enables me to tackle challenges from multiple angles, whether I’m optimizing back-end functionality or designing engaging front-end interfaces. Proficient in Git and GitHub, I effectively manage version control and collaborate seamlessly with other developers.
+
+          Driven by a passion for continuous learning, I stay updated with industry trends and best practices. I believe that collaboration is essential to innovation, and I actively seek opportunities to work with others to bring ideas to life. By leveraging my experience across various programming languages, frameworks, and databases, I aim to deliver impactful solutions that meet the needs of users and businesses alike. I’m excited to tackle new challenges and contribute to projects that push the boundaries of what technology can achieve.</p>
+      </div>
+      <div class="language-box">
+        <div class="language-icons">
+          <i class="fab fa-python" style="font-size: 36px;"></i>
+          <i class="fab fa-django" style="font-size: 36px;"></i>
+          <i class="fab fa-java" style="font-size: 36px;"></i>
+          <i class="fab fa-js" style="font-size: 36px;"></i>
+          <i class="fab fa-html5" style="font-size: 36px;"></i>
+          <i class="fab fa-css3" style="font-size: 36px;"></i>
+          <i class="fab fa-git" style="font-size: 36px;"></i>
+          <i class="fab fa-c" style="font-size: 36px;"></i> <!-- C logo -->
+          <i class="fab fa-dotnet" style="font-size: 36px;"></i> <!-- .NET logo -->
+          <i class="fas fa-database" style="font-size: 36px;"></i> <!-- MySQL logo -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- My Projects Section Start -->
+    <section class="services" id="services">
+      <div class="content">
+        <div class="title"><span>My Projects</span></div>
+        <div class="box-container">
+          {% for i in data %}
+            <div class="boxes" style="background-image: url('{{i.photo.url}}');">
+              <div class="topic">{{i.name}}</div>
+              <div class="buttons">
+                <a href="{{i.url}}" target="_blank"><button class="btn btn-primary">Live</button></a>
+                <a href="{{i.github}}" target="_blank"><button class="btn btn-secondary">Source Code</button></a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Me section Start -->
+<section class="contact" id="contact">
+    <div class="content">
+      <div class="title"><span>Contact Me</span></div>
+      {% if messages %}{% for message in messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hey</strong>{{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}{% endif %}
+      <div class="text">
+      <form action="{% url "contact" %}" method="POST">
+        {% csrf_token %} 
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="button">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+    <!-- Footer Section Start -->
+    <!-- Footer Section Start -->
+<!-- Footer Section Start -->
+<footer>
+  <div class="text">
+    <span>Contact me:</span>
+    <br>
+    <span>Phone: +977 9864667787</span>
+    <br>
+    <span>Email: <a href="mailto:dahalrohan82@gmail.com" style="text-decoration: none;">dahalrohan82@gmail.com</a></span>
+    <br>
+    <span>Created By <a href="#" style="text-decoration: none;">Rohan</a> | &#169; {{date}} All Rights Reserved</span>
+  </div>
+</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
