@@ -507,4 +507,55 @@ footer .text span a:hover{
     color: #4070f4;
   }
 }
-
+@media (max-width: 768px) {
+  nav .navbar {
+    width: 90%;
+  }
+  nav .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0E2431;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu {
+    left: 0;
+  }
+  nav .navbar .menu a {
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover {
+    color: #4070f4;
+  }
+  nav .navbar .media-icons {
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+}
+@media (min-width: 750px) {
+  nav .menu-btn {
+    display: none;
+  }
+}
+nav .menu-btn {
+  visibility: visible;
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
