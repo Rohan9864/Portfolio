@@ -129,8 +129,7 @@
                 My journey in coding began with a curiosity for how things work, which quickly evolved into a love for crafting seamless user experiences. I enjoy leveraging the Django framework to create scalable and efficient applications that meet user needs while adhering to best practices.
                 
                 I believe in the power of collaboration and continuous learning, always seeking to expand my skill set and stay updated with the latest industry trends. When I’m not coding, you can find me exploring tech blogs, contributing to open-source projects, or diving into new programming languages.
-                
-                
+                 
             </p>
           </div>
         </div>
@@ -188,12 +187,6 @@
 <section class="contact" id="contact">
     <div class="content">
       <div class="title"><span>Contact Me</span></div>
-      {% if messages %}{% for message in messages %}
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Hey</strong>{{message}}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      {% endfor %}{% endif %}
       <div class="text">
       <form action="{% url "contact" %}" method="POST">
         {% csrf_token %} 
@@ -204,6 +197,10 @@
         <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
         </div>
         <div class="form-group">
           <label for="message">Message:</label>

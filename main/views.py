@@ -15,10 +15,11 @@ def contact(request):
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
+        phone = request.POST.get('phone')
         message = request.POST.get('message')
         date=datetime.now()
 
-        Contact.objects.create(name=name,email=email,message=message)
+        Contact.objects.create(name=name,email=email,phone=phone,message=message)
 
         subject='Contact Request'
         message=render_to_string('msg.html',{'name':name,'date':date})
